@@ -1,0 +1,17 @@
+name: 'Documentation Feedback Action'
+description: 'Analyzes and generates documentation feedback using Google Gemini'
+inputs:
+  gemini_api_key:
+    description: 'Gemini API Key'
+    required: true
+  file_paths:
+    description: 'Path to the documentation files to analyze'
+    required: true
+    default: '.'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    GEMINI_API_KEY: ${{ inputs.gemini_api_key }}
+    FILE_PATHS: ${{ inputs.file_paths }} 

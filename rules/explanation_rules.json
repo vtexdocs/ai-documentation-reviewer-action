@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "purpose": "Provides a detailed and comprehensive explanation of a topic, including architectural and system-level explanations."
+  },
+  "frontmatter": {
+    "title": {
+      "description": "The title of the explanation.",
+      "mandatory": true
+    },
+    "slug": {
+      "description": "A unique identifier for the documentation. It should be the hyphenated title.",
+      "mandatory": true
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "purpose": "Provides instructions and a template for writing effective release notes on the VTEX platform.",
+    "usage": "A template for communicating new features, fixes, and changes to users in a clear and structured format within the VTEX Developer Portal."
+  },
+  "frontmatter": {
+    "title": {
+      "description": "The title of the release note, reflecting the product/feature and a concise, clear summary of the change or update. The summary should briefly describe the key change or improvement made to the product/feature.",
+      "template": "<Product/Feature name>: <Summary>",
+      "example": "Catalog: New API endpoints for managing product listings",
+      "mandatory": true,
+      "validation_heuristic": "Ensure the title is formatted as '<Product/Feature name>: <Summary>', with a colon separating the product/feature name from the brief summary of the change. The summary should be no longer than a short phrase and should avoid overly technical language. It should focus on the most significant change or improvement to help users understand the release at a glance."
+    },
+    "slug": {
+      "description": "A unique identifier for the release, containing the release date in the format 'YYYY-MM-DD', followed by the hyphenated title.",
+      "template": "YYYY-MM-DD-title",
+      "example": "2025-05-25-catalog-new-endpoints",
+      "mandatory": true
+    },
+    "type": {
+      "description": "The category of the release, specifying the type of change.",
+      "mandatory": true,
+      "options": {
+        "added": {
+          "description": "Introduces new features, functionalities, or components."
+        },
+        "deprecated": {
+          "description": "Marks a feature/component as no longer recommended."
+        },
+        "info": {
+          "description": "Shares important general information or updates."
+        },
+        "fixed": {
+          "description": "Identifies bugs or issues that were resolved."
+        },
+        "removed": {
+          "description": "Indicates that a feature or component was eliminated."
+        },
+        "improved": {
+          "description": "Highlights enhancements to existing features or performance improvements."
+        }
+      }
+    },
+    "excerpt": {
+      "description": "A brief, high-level summary of the release, providing users with key information at a glance.",
+      "example": "FastStore introduces two new Content Types in Headless CMS, enabling better organization and scalability for headers and footers across all store pages.",
+      "mandatory": true
+    },
+    "createdAt": {
+      "description": "The date and time when the release note was created, typically in ISO 8601 format (e.g., '2025-04-25T10:00:00Z').",
+      "mandatory": true
+    },
+    "updatedAt": {
+      "description": "The date and time when the release note was last updated, typically in ISO 8601 format (e.g., '2025-04-25T10:00:00Z').",
+      "mandatory": false
+    },
+    "hidden": {
+      "description": "A boolean value indicating whether the release note is visible to the public or hidden (for draft or internal use).",
+      "mandatory": false
+    }
+  },
+  "body": [
+    {
+      "description": "Provide a clear explanation of the change, its purpose, and the key benefits to the users."
+    },
+    {
+      "section": "What has changed?",
+      "description": "Explain and list the changes introduced in this release. Also indicate the differences between previous behavior."
+    },
+    {
+      "section": "Why did we make this change?",
+      "description": "Explain the motivation behind the change, such as addressing user needs, fixing issues, or improving performance."
+    },
+    {
+      "section": "What needs to be done?",
+      "description": "Provide instructions or guidance for users on how to take advantage of the new feature, including any configuration or installation steps if necessary. Include a call to action linking to more information."
+    }
+  ],
+  "style_guide": {
+    "tone_and_voice": {
+      "rules": [
+        {
+          "id": "R1.1",
+          "description": "Use clear, direct language without unnecessary adverbs or marketing speak",
+          "validation_heuristic": [
+            "Flag marketing adjectives (e.g., 'amazing', 'powerful').",
+            "Flag unnecessary adverbs (e.g., 'simply', 'easily') in instructional content."
+          ]
+        },
+        {
+          "id": "R1.2",
+          "description": "Maintain professional but approachable tone",
+          "validation_heuristic": "Verify text avoids both overly casual language ('stuff', 'thing') and overly formal constructions ('one must', 'the user shall')"
+        }
+      ],
+      "examples": [
+        {
+          "rule": "R1.1",
+          "correct": "Use the `vtex setup` command to initialize your environment.",
+          "incorrect": "Simply run `vtex setup` to effortlessly bootstrap your stuff.",
+          "explanation": "Adding 'effortlessly'/'simply' in the incorrect version introduces unnecessary subjectivity and promotional tone. The correct version avoids this and stays factual."
+        },
+        {
+          "rule": "R1.1",
+          "correct": "This command improves performance.",
+          "incorrect": "This command effortlessly improves performance.",
+          "explanation": ""
+        },
+        {
+          "rule": "R1.1",
+          "correct": "Use the `vtex setup` command to initialize your environment.",
+          "incorrect": "Simply run the setup and you're good to go.",
+          "explanation": "The incorrect sentence is vague ('the setup'), uses imprecise language ('you're good to go'), and adds 'simply'—all of which reduce clarity. The correct version avoids this and stays factual."
+        },
+        {
+          "rule": "R1.2",
+          "correct": "You can configure your store settings directly in the Admin panel.",
+          "incorrect": "Just go to the Admin thing and tweak your config there.",
+          "explanation": "The incorrect version is too informal and uses slang ('Admin thing', 'tweak your config'). The correct version is professional and clear."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "type": "Guide",
+    "purpose": "Shows how to complete specific tasks in the VTEX ecosystem.",
+    "tone": "Practical and task-oriented",
+    "audience": "Users with some prior knowledge",
+    "use_case": "Setup, configuration, deployment"
+  },
+  {
+    "type": "Tutorial",
+    "purpose": "Teaches a topic through step-by-step instructions.",
+    "tone": "Educational and beginner-friendly",
+    "audience": "New users or those learning a capability",
+    "use_case": "Build something from scratch in VTEX"
+  },
+  {
+    "type": "Reference",
+    "purpose": "Provides exact technical details for quick lookup.",
+    "tone": "Factual and complete",
+    "audience": "All users needing specifics",
+    "use_case": "Look up available themes, CLI commands, etc."
+  },
+  {
+    "type": "API Reference",
+    "purpose": "Provides comprehensive technical documentation of APIs, including endpoints, request/response formats, authentication methods, and data models.",
+    "tone": "Technical, precise, consistent, and methodically structured",
+    "audience": "Developers integrating with services, technical users implementing solutions, QA engineers testing integrations, and support personnel troubleshooting issues",
+    "use_case": "Implement API integrations, understand available endpoints and operations, review request/response formats, navigate authentication requirements, handle error scenarios, and explore working code examples"
+  },
+  {
+    "type": "Explanation",
+    "purpose": "Provides a detailed and comprehensive explanation of a topic, including architectural and system-level explanations.",
+    "tone": "Clear, detailed, and expansive",
+    "audience": "Users seeking an in-depth understanding of a concept, architecture, or workflows",
+    "use_case": "Clarify complex concepts, analyze multiple aspects of a topic, or provide a thorough understanding"
+  },
+  {
+    "type": "Release Note",
+    "purpose": "Summarizes platform changes.",
+    "tone": "Concise and timely",
+    "audience": "All users keeping track of updates",
+    "use_case": "Track new features, updates, deprecations, and bug fixes"
+  }
+]
