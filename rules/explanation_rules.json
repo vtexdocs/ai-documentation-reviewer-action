@@ -1,15 +1,180 @@
 {
   "metadata": {
-    "purpose": "Provides a detailed and comprehensive explanation of a topic, including architectural and system-level explanations."
+    "purpose": "Provides instructions and a template for writing effective explanation documentation on the VTEX platform.",
+    "usage": "A template for explaning a subject in the VTEX digital commerce ecosystem within the VTEX Developer Portal. The subject can be a concept, an architecture, a type of integration, etc."
   },
-  "frontmatter": {
-    "title": {
-      "description": "The title of the explanation.",
-      "mandatory": true
+  "style_guide": {
+    "content_strcuture": {
+        "rules": [
+          {
+            "id": "R0.1",
+            "description": "Content should be divided in headings grouping ideas",
+            "validation_heuristic" : [
+              "The content begins with an introduction, then headings come after for specific topics.",
+              "Each heading should properly compartimentalize an idea (e.g., step-by-step instructions, explanation of sub-concepts)"
+            ]
+          }
+        ]
     },
-    "slug": {
-      "description": "A unique identifier for the documentation. It should be the hyphenated title.",
-      "mandatory": true
+    "tone_and_voice": {
+      "rules": [
+        {
+          "id": "R1.1",
+          "description": "Use clear, direct language without unnecessary adverbs or marketing speak",
+          "validation_heuristic": [
+            "Flag marketing adjectives (e.g., 'amazing', 'powerful').",
+            "Flag unnecessary adverbs (e.g., 'simply', 'easily') in instructional content."
+          ]
+        },
+        {
+          "id": "R1.2",
+          "description": "Maintain professional but approachable tone",
+          "validation_heuristic": "Verify text avoids both overly casual language ('stuff', 'thing') and overly formal constructions ('one must', 'the user shall')"
+        }
+      ],
+      "examples": [
+        {
+          "rule": "R1.1",
+          "correct": "Use the `vtex setup` command to initialize your environment.",
+          "incorrect": "Simply run `vtex setup` to effortlessly bootstrap your stuff.",
+          "explanation": "Adding 'effortlessly'/'simply' in the incorrect version introduces unnecessary subjectivity and promotional tone. The correct version avoids this and stays factual."
+        },
+        {
+          "rule": "R1.1",
+          "correct": "This command improves performance.",
+          "incorrect": "This command effortlessly improves performance.",
+          "explanation": ""
+        },
+        {
+          "rule": "R1.1",
+          "correct": "Use the `vtex setup` command to initialize your environment.",
+          "incorrect": "Simply run the setup and you're good to go.",
+          "explanation": "The incorrect sentence is vague ('the setup'), uses imprecise language ('you're good to go'), and adds 'simply'—all of which reduce clarity. The correct version avoids this and stays factual."
+        },
+        {
+          "rule": "R1.2",
+          "correct": "You can configure your store settings directly in the Admin panel.",
+          "incorrect": "Just go to the Admin thing and tweak your config there.",
+          "explanation": "The incorrect version is too informal and uses slang ('Admin thing', 'tweak your config'). The correct version is professional and clear."
+        }
+      ]
+    },
+    "headings": {
+      "rules": [
+        {
+          "id": "R13.1",
+          "description": "Use sentence case for all headings and titles."
+        },
+        {
+          "id": "R13.2",
+          "description": "Do not use emojis in headings."
+        },
+        {
+          "id": "R13.3",
+          "description": "Do not skip heading levels. Headings must follow a sequential hierarchy when nesting: H2 (`##`) → H3 (`###`) → H4 (`####`). You may return to a higher-level heading (e.g., from `###` back to `##`), but you must not skip intermediate levels when deepening the structure.",
+          "validation_heuristic": "Verify that deeper nested headings do not skip intermediate levels (e.g., no jump from `##` to `####`). Allow headings to return to a higher level."
+        },
+        {
+          "id": "R13.4",
+          "description": "Headings should be H2 or lower. H1 heading is not used since the title is used only in the frontmatter."
+        },
+        {
+          "id": "R13.5",
+          "description": "Avoid repeating heading names."
+        }
+      ],
+      "examples": [
+        {
+          "rule": "R13.1",
+          "correct": "## Before you begin",
+          "incorrect": "## Before You Begin"
+        },
+        {
+          "rule": "R13.1",
+          "correct": "## Certifications",
+          "incorrect": "## certifications"
+        },
+        {
+          "rule": "R13.1",
+          "correct": "## Instructions",
+          "incorrect": "## INSTRUCTIONS"
+        },
+        {
+          "rule": "R13.2",
+          "correct": "## Instructions",
+          "incorrect": "## 📝 Instructions"
+        },
+        {
+          "rule": "R13.3",
+            "correct": [
+              "## Overview",
+              "### Details",
+              "#### Configuration"
+            ],
+            "incorrect": [
+              "## Overview",
+              "#### Configuration"
+            ],
+            "explanation": "The incorrect example jumps from level 2 (`##`) to level 4 (`####`) without including a level 3 heading (`###`). Heading levels must increase sequentially without skipping intermediate levels."
+        },
+        {
+          "rule": "R13.3",
+            "correct": [
+              "## Before you begin",
+              "## Instructions",
+              "### Step 1",
+              "### Step 2",
+              "## App behavior"
+            ],
+            "incorrect": [
+              "## Before you begin",
+              "# Instructions",
+              "## Step 1",
+              "## Step 2"
+            ],
+            "explanation": "The incorrect version starts with a level 2 heading (`##`) and then jumps to a level 1 heading (`#`). Heading levels should start with a single level 1 heading (`#`) and follow a consistent and logical hierarchy."
+        },
+        {
+          "rule": "R13.4",
+          "incorrect": "# VTEX IO architecture",
+          "explanation": "H1 heading should not be used, since the title is used only in the frontmatter. Other headings should be level 2 or lower."
+        },
+        {
+          "rule": "R13.5",
+          "incorrect": "## Certifications\n\n### Certifications",
+          "explanation": "Heading names should not repeat."
+        }
+      ]
+    },
+    "callouts": {
+      "rules": [
+        {
+          "id": "R12.1",
+          "description": "Use specific symbols for different callout types:\n- ℹ️ Information\n- ⚠️ Warning\n- ⛔ Critical/Danger"
+        },
+        {
+          "id": "R12.2",
+          "description": "A callout is valid if it begins with the correct symbol (⚠️, ℹ️, ⛔) and a brief explanatory message. It should not contain words like \"Warning:\", \"Info:\", or \"Note:\" after the symbol."
+        }
+      ],
+      "examples": [
+        {
+          "rule": ["R12.1", "R12.2"],
+          "correct": "> ℹ️ All workspace names must be lowercase and unique within your account.",
+          "incorrect": "> ℹ️ Here's some random info. Also:"
+        },
+        {
+          "rule": ["R12.1", "R12.2"],
+          "correct": "> ⚠️ The `vtex publish` command pushes the app to production immediately. Ensure your code is production-ready.",
+          "incorrect": "⚠️ ⚠️ ⚠️ Warning! Be careful!"
+        },
+        {
+          "rule": "R12.2",
+          "correct": "> ℹ️ The file name should match the name of the query you want to extend.",
+          "incorrect": "> ℹ️ Information: The file name should match the name of the query you want to extend."
+        }
+      ]
     }
   }
 }
+
