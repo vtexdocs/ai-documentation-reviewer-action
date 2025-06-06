@@ -118,23 +118,6 @@
             "explanation": "The incorrect example jumps from level 2 (`##`) to level 4 (`####`) without including a level 3 heading (`###`). Heading levels must increase sequentially without skipping intermediate levels."
         },
         {
-          "rule": "R13.3",
-            "correct": [
-              "## Before you begin",
-              "## Instructions",
-              "### Step 1",
-              "### Step 2",
-              "## App behavior"
-            ],
-            "incorrect": [
-              "## Before you begin",
-              "# Instructions",
-              "## Step 1",
-              "## Step 2"
-            ],
-            "explanation": "The incorrect version starts with a level 2 heading (`##`) and then jumps to a level 1 heading (`#`). Heading levels should start with a single level 1 heading (`#`) and follow a consistent and logical hierarchy."
-        },
-        {
           "rule": "R13.4",
           "incorrect": "# VTEX IO architecture",
           "explanation": "H1 heading should not be used, since the title is used only in the frontmatter. Other headings should be level 2 or lower."
