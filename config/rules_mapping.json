@@ -1,4 +1,6 @@
 {
   "Release Note": "/action/rules/release_notes_rules.json",
-  "Explanation": "/action/rules/explanation_rules.json"
+  "Explanation": "/action/rules/explanation_rules.json",
+  "Announcement": "/action/rules/announcement_rules.json",
+  "Troubleshooting": "/action/rules/troubleshooting_rules.json"
 }

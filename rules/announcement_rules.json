@@ -1,0 +1,34 @@
+{
+    "metadata": {
+    "purpose": "Provides instructions and a template for writing announcements that communicate product changes to VTEX users in a clear and actionable way.",
+    "usage": "A template for communicating new features, product updates, or product deprecations to platform operators and users within the VTEX platform."
+    },
+
+  "structure_validation": {
+    "synopsis": "Verify that the synopsis is present, concise (max 120 characters), and accurately summarizes the feature and benefit.",
+    "slug": "Ensure that the slug is present, URL-friendly, and reflects the feature name.",
+    "feature_intro": "Confirm that the feature name and its main benefit are clearly stated, including availability (Alpha, Beta, GA, country-specific, etc.).",
+    "what_changed": "Check that it explains the previous process and how the feature changes or improves it.",
+    "why_we_made_this_change": "Ensure it explains the reasoning behind the change and lists at least one key benefit (preferably 3).",
+    "what_needs_to_be_done": "Verify that it clearly explains what the user needs to do to start using the feature, with actionable steps.",
+    "additional_resources": "Confirm that there is a link or reference to further documentation, tracks, or help articles."
+  },
+  "style_guidelines": {
+    "voice": "Clear, direct, and user-centered. Use active voice.",
+    "tone": "Friendly, professional, and supportive.",
+    "avoid": [
+      "Vague statements (e.g., 'this is better').",
+      "Excessive technical jargon without context.",
+      "Marketing language or exaggerated claims."
+    ],
+    "consistency": [
+      "Use consistent terminology for features, modules, and menu names.",
+      "Use correct product names and capitalization according to VTEX style guide.",
+      "Error messages and UI elements should match the platform exactly."
+    ],
+    "language": [
+      "Use present tense for available features.",
+      "Be precise: specify availability scope (Alpha, Beta, GA, specific regions, accounts, or modules)."
+    ]
+  }
+}

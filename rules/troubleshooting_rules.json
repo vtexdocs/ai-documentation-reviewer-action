@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "purpose": "Help users find practical solutions to problems they may encounter when completing tasks on the platform.",
+    "usage": "A template for documenting known issues and their solutions within the VTEX platform."
+  },
+  "review_rules": {
+    "title": {
+      "voice": "Use first-person voice from the user's perspective.",
+      "format": "Avoid questions. Limit to 60 characters. Focus on what the user cannot do.",
+      "examples": {
+        "do": ["My store is not accepting credit card purchases.", "I can’t create a production workspace"],
+        "dont": ["Why isn't my credit card payment working?", "Error while creating a production workspace"]
+      }
+    },
+    "introduction": {
+      "content": "Describe the scenario and affected module/functionality in 1–2 concise paragraphs.",
+      "inclusions": ["Error messages (if any)", "Module/functionality", "Reproduction conditions"],
+      "examples": {
+        "do": ["When attempting to complete a purchase in the checkout module, users encounter the 'Payment not processed' error."],
+        "dont": ["Various issues have been reported by users attempting to place an order."]
+      }
+    },
+    "tags_keywords": {
+      "tags": {
+        "rule": "List up to 3 relevant product names as tags, using consistent terminology.",
+        "examples": {
+          "do": ["Catalog", "Store Framework"],
+          "dont": ["Catalog module and Store Framework technology."]
+        }
+      },
+      "keywords": {
+        "rule": "Use simple, searchable keywords separated by commas. Avoid long phrases or module descriptions.",
+        "examples": {
+          "do": ["SKU, product, integration"],
+          "dont": ["Catalog module, SKU code, integration with other systems"]
+        }
+      }
+    },
+    "solution": {
+      "structure": [
+        "Use headings for each solution.",
+        "Use steps (numbered or subsections) when needed.",
+        "Link to existing tutorials if the solution is complex.",
+        "Indicate who is responsible for each step (VTEX or user)."
+      ],
+      "clarity": "Avoid ambiguity, duplication, or overly generic descriptions. Reuse existing docs when possible.",
+      "examples": {
+        "do": ["Make sure the email is correct and the password meets the required format..."],
+        "dont": ["Login problems often occur and may be difficult to identify..."]
+      }
+    },
+    "assets": {
+      "rule": "Include relevant screenshots and examples whenever possible to support understanding."
+    },
+    "template_variation": {
+      "rule": "For grouped errors, use list format with error messages, meanings, and required actions.",
+      "reference": "https://docs.google.com/document/d/1KxNRaeMHdq3OzNQKiSjxxctRe3Q0QVrP-6YlG0tMTLE/edit?usp=sharing"
+    }
+  }
+}
