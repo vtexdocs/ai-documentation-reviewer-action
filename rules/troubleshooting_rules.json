@@ -1,60 +1,146 @@
 {
   "metadata": {
-    "purpose": "Help users find practical solutions to problems they may encounter when completing tasks on the platform.",
+    "purpose": "Help users find practical solutions to problems they may encounter when completing tasks on the VTEX platform.",
     "usage": "A template for documenting known issues and their solutions within the VTEX platform."
   },
-  "review_rules": {
+  "frontmatter": {
     "title": {
-      "voice": "Use first-person voice from the user's perspective.",
+      "description": "A clear, concise summary of the issue from the user's perspective.",
+      "mandatory": true,
+      "voice": "First-person perspective to reflect the user's experience",
       "format": "Avoid questions. Limit to 60 characters. Focus on what the user cannot do.",
       "examples": {
-        "do": ["My store is not accepting credit card purchases.", "I can’t create a production workspace"],
-        "dont": ["Why isn't my credit card payment working?", "Error while creating a production workspace"]
+        "do": [
+          "My store is not accepting credit card purchases.",
+          "I can’t create a production workspace"
+        ],
+        "dont": [
+          "Why isn't my credit card payment working?",
+          "Error while creating a production workspace"
+        ]
       }
     },
-    "introduction": {
-      "content": "Describe the scenario and affected module/functionality in 1–2 concise paragraphs.",
-      "inclusions": ["Error messages (if any)", "Module/functionality", "Reproduction conditions"],
+    "tags": {
+      "description": "List up to 3 relevant product or module names associated with the issue.",
+      "mandatory": true,
       "examples": {
-        "do": ["When attempting to complete a purchase in the checkout module, users encounter the 'Payment not processed' error."],
-        "dont": ["Various issues have been reported by users attempting to place an order."]
+        "do": [
+          "Catalog",
+          "Store Framework"
+        ],
+        "dont": [
+          "Catalog module and Store Framework technology."
+        ]
       }
     },
-    "tags_keywords": {
-      "tags": {
-        "rule": "List up to 3 relevant product names as tags, using consistent terminology.",
-        "examples": {
-          "do": ["Catalog", "Store Framework"],
-          "dont": ["Catalog module and Store Framework technology."]
-        }
-      },
-      "keywords": {
-        "rule": "Use simple, searchable keywords separated by commas. Avoid long phrases or module descriptions.",
-        "examples": {
-          "do": ["SKU, product, integration"],
-          "dont": ["Catalog module, SKU code, integration with other systems"]
-        }
+    "keywords": {
+      "description": "Include up to 3 key terms that help surface the article in search results",
+      "mandatory": true,
+      "examples": {
+        "do": [
+          "Unidentified order",
+          "SKU"
+        ],
+        "dont": [
+          "Catalog module, SKU code, integration with other systems"
+        ]
       }
-    },
-    "solution": {
-      "structure": [
-        "Use headings for each solution.",
-        "Use steps (numbered or subsections) when needed.",
-        "Link to existing tutorials if the solution is complex.",
-        "Indicate who is responsible for each step (VTEX or user)."
+    }
+  },
+  "body": [
+    {
+      "description": "Describe the scenario and affected module/functionality in 1–2 concise paragraphs.",
+      "inclusions": [
+        "Error messages (if any)",
+        "Module/functionality",
+        "Reproduction conditions"
       ],
-      "clarity": "Avoid ambiguity, duplication, or overly generic descriptions. Reuse existing docs when possible.",
       "examples": {
-        "do": ["Make sure the email is correct and the password meets the required format..."],
-        "dont": ["Login problems often occur and may be difficult to identify..."]
+        "do": [
+          "When attempting to complete a purchase in the checkout module, users encounter the 'Payment not processed' error."
+        ],
+        "dont": [
+          "Various issues have been reported by users attempting to place an order."
+        ]
       }
     },
-    "assets": {
-      "rule": "Include relevant screenshots and examples whenever possible to support understanding."
-    },
-    "template_variation": {
-      "rule": "For grouped errors, use list format with error messages, meanings, and required actions.",
-      "reference": "https://docs.google.com/document/d/1KxNRaeMHdq3OzNQKiSjxxctRe3Q0QVrP-6YlG0tMTLE/edit?usp=sharing"
+    {
+      "section": "Solutions",
+      "description": "Provide a step-by-step guide to resolve the issue, including any necessary prerequisites."
+    }
+  ],
+  "style_guide": {
+    "solutions": {
+      "rules": [
+        {
+          "id": "R1.1",
+          "description": "For grouped errors, use list format with error messages, meanings, and required actions.",
+          "validation_heuristic": [
+            "The solution is written in a straightforward manner, avoiding jargon and complex terms."
+          ]
+        },
+        {
+          "id": "R1.2",
+          "description": "Use examples whenever possible to support understanding.",
+          "validation_heuristic": [
+            "The solution presents at least one 'do' example is provided in each section."
+          ]
+        },
+        {
+          "id": "R1.3",
+          "description": "Use images to illustrate steps in the solution.",
+          "validation_heuristic": [
+            "Images should be clear and relevant to the content."
+          ]
+        },
+        {
+          "id": "R1.4",
+          "description": "Use links to existing documentation for complex solutions.",
+          "validation_heuristic": [
+            "Links should be relevant and lead to the correct documentation."
+          ]
+        },
+        {
+          "id": "R1.5",
+          "description": "Use active voice and imperative mood for instructions.",
+          "validation_heuristic": [
+            "Instructions should be clear and actionable."
+          ]
+        },
+        {
+          "id": "R1.6",
+          "description": "Use numbered steps for step-by-step instructions.",
+          "validation_heuristic": [
+            "Steps should be clear, concise, and easy to follow."
+          ]
+        },
+        {
+          "id": "R1.7",
+          "description": "Indicate who is responsible for each step (VTEX or user).",
+          "validation_heuristic": [
+            "Responsibilities should be clearly defined."
+          ]
+        },
+        {
+          "id": "R1.8",
+          "description": "Use 'do' and 'don't' examples to clarify common mistakes.",
+          "validation_heuristic": [
+            "Examples should be relevant and help clarify the solution."
+          ]
+        },
+        {
+          "id": "R1.9",
+          "description": "Use clear, concise language to avoid ambiguity.",
+          "examples": {
+            "do": [
+              "Make sure the email is correct and the password meets the required format..."
+            ],
+            "dont": [
+              "Login problems often occur and may be difficult to identify..."
+            ]
+          }
+        }
+      ]
     }
   }
 }
