@@ -110,22 +110,19 @@
         {
           "id": "R1.6",
           "description": "Use numbered steps for step-by-step instructions.",
-          "validation_heuristic": [
-            "Steps should be clear, concise, and easy to follow."
-          ]
         },
         {
           "id": "R1.7",
           "description": "Indicate who is responsible for each step (VTEX or user).",
           "validation_heuristic": [
-            "Responsibilities should be clearly defined."
+            "Check if the actor responsible for each step is specified."
           ]
         },
         {
           "id": "R1.8",
           "description": "Use 'do' and 'don't' examples to clarify common mistakes.",
           "validation_heuristic": [
-            "Examples should be relevant and help clarify the solution."
+            "Check if the provided examples include dos and donts."
           ]
         },
         {
