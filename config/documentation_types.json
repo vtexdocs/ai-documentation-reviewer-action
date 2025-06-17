@@ -40,5 +40,19 @@
     "tone": "Concise and timely",
     "audience": "All users keeping track of updates",
     "use_case": "Track new features, updates, deprecations, and bug fixes"
+  },
+  {
+    "type": "Announcement",
+    "purpose": "Communicate a new feature, update, or product change in a clear, concise, and structured way, explaining what changed, why it changed, the benefits for the user, and the necessary steps to adopt or start using the update.",
+    "tone": "Concise and timely",
+    "audience": "All users keeping track of updates",
+    "use_case": "Track new features, updates, deprecations, and bug fixes"
+  },
+  {
+    "type": "Troubleshooting",
+    "purpose": "Help users find practical solutions to problems they may encounter when completing tasks on the platform.",
+    "tone": "Practical and task-oriented",
+    "audience": "Users with some prior experience with the VTEX environment",
+    "use_case": "Troubleshoot issues"
   }
 ]
