@@ -29,12 +29,7 @@
           "description": "Content must be complete and accurate, avoiding exaggeration and irrelevant information.",
           "validation_heuristic": "Detect overstatements or unrelated details."
         },
-        {
-          "id": "RW1.3",
-          "description": "Clarity and precision must be prioritized to eliminate ambiguity.",
-          "validation_heuristic": "Detect ambiguous references or vague descriptions that lack specificity."
-        },
-        {
+       {
           "id": "RW1.4",
           "description": "Use present tense, active voice, and simple sentence constructions.",
           "validation_heuristic": "Check for passive voice, past tense where not required, or complex syntactic patterns."
@@ -52,12 +47,6 @@
           "correct": "Preact reduces the JavaScript bundle size, improving page load speed.",
           "incorrect": "Preact drastically revolutionizes your app’s performance forever!",
           "explanation": "The incorrect version includes exaggerated claims. The correct version remains factual and specific."
-        },
-        {
-          "rule": "RW1.3",
-          "correct": "Click **Settings**, then **API Keys**.",
-          "incorrect": "Go to the configuration section and look for the relevant part.",
-          "explanation": "The incorrect version is vague, potentially leading to confusion. The correct version is precise and unambiguous."
         },
         {
           "rule": "RW1.4",
