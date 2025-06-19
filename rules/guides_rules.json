@@ -1,5 +1,129 @@
 {
   "metadata": {
-    "purpose": "Shows how to complete specific tasks in the VTEX ecosystem."
+    "purpose": "Provides instructions and a template for writing effective how-to guides.",
+    "usage": "A template for task-oriented documentation in developer portals, product docs, or internal wikis where the reader already knows the product basics but needs to accomplish a specific goal."
+  },
+  "style_guide": {
+    "content_structure": {
+      "rules": [
+        {
+          "id": "R0.1",
+          "description": "A how-to guide begins with a goal-oriented introduction, followed by a prerequisites section and an instructions section that contains an ordered list of steps.",
+          "validation_heuristic": [
+            "Verify the presence of an opening paragraph that states the task outcome.",
+            "Confirm that a 'Before you begin' section lists all prerequisites.",
+            "Ensure that instructions are broken into numbered steps inside an 'Instructions' section."
+          ]
+        }
+      ]
+    },
+    "tone_and_voice": {
+      "rules": [
+        {
+          "id": "RW1.1",
+          "description": "Content must be direct, informative, clear, and concise for the target audience.",
+          "validation_heuristic": "Flag verbose or vague wording that impairs directness or clarity."
+        },
+        {
+          "id": "RW1.2",
+          "description": "Content must be complete and accurate, avoiding exaggeration and irrelevant information.",
+          "validation_heuristic": "Detect overstatements or unrelated details."
+        },
+       {
+          "id": "RW1.4",
+          "description": "Use present tense, active voice, and simple sentence constructions.",
+          "validation_heuristic": "Check for passive voice, past tense where not required, or complex syntactic patterns."
+        }
+      ],
+      "examples": [
+        {
+          "rule": "RW1.1",
+          "correct": "Run `yarn build` to compile your project for production.",
+          "incorrect": "To finalize your work, you might want to try running some build command, like `yarn build`.",
+          "explanation": "The incorrect version is indirect and vague, while the correct version provides a clear, actionable instruction."
+        },
+        {
+          "rule": "RW1.2",
+          "correct": "Preact reduces the JavaScript bundle size, improving page load speed.",
+          "incorrect": "Preact drastically revolutionizes your app’s performance forever!",
+          "explanation": "The incorrect version includes exaggerated claims. The correct version remains factual and specific."
+        },
+        {
+          "rule": "RW1.4",
+          "correct": "Open the terminal and run `yarn dev` to start the server.",
+          "incorrect": "The server was started by running the `yarn dev` command in the terminal.",
+          "explanation": "The correct version uses active voice and present tense, which improves clarity and engagement."
+        }
+      ]
+    },
+    "headings": {
+      "rules": [
+        {
+          "id": "RH1.1",
+          "description": "Write the title in gerund form to clearly state the user's goal (e.g., 'Setting up your development environment')."
+        },
+        {
+          "id": "RH1.2",
+          "description": "Include 'Before you begin' as top-level headings when they apply."
+        },
+        {
+          "id": "RH1.3",
+          "description": "Include 'Instructions' as top-level headings."
+        },
+        {
+          "id": "RH1.4",
+          "description": "Format step headings as '### Step N - Descriptive title' and increment N sequentially without skipping numbers.",
+          "validation_heuristic": "Check that each step heading starts with '### Step ' and the numeric sequence is continuous."
+        },
+        {
+          "id": "RH1.5",
+          "description": "If the procedure requires only one step, omit the step heading and list the actions directly under 'Instructions'."
+        },
+        {
+          "id": "RH1.6",
+          "description": "Do not repeat heading names anywhere in the document."
+        }
+      ],
+      "examples": [
+        {
+          "rule": "RH1.1",
+          "correct": "Setting up your development environment",
+          "incorrect": "Setup development environment"
+        },
+        {
+          "rule": "RH1.2",
+          "correct": "## Before you begin",
+          "incorrect": "## Pre requisites"
+        },
+        {
+          "rule": "RH1.3",
+          "correct": "## Instructions",
+          "incorrect": "## Instructions and Steps"
+        },
+        {
+          "rule": "RH1.4",
+          "correct": [
+            "### Step 1 - Install dependencies",
+            "### Step 2 - Configure environment"
+          ],
+          "incorrect": [
+            "### Step 1 - Install dependencies",
+            "### Step 3 - Configure environment"
+          ],
+          "explanation": "The incorrect example skips Step 2, breaking the sequential order."
+        },
+        {
+          "rule": "RH1.5",
+          "correct": "## Instructions\n\n1. Run the installation script.\n2. Confirm the output.",
+          "incorrect": "## Instructions\n\n### Step 1 - Run the installation script\n\n1. Run the installation script.",
+          "explanation": "Because there is only one step, adding a step heading is unnecessary."
+        },
+        {
+          "rule": "RH1.6",
+          "incorrect": "## Instructions\n\n### Instructions",
+          "explanation": "Heading names should not repeat."
+        }
+      ]
+    }
   }
 }
