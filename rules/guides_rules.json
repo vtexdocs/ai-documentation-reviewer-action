@@ -120,7 +120,7 @@
         },
         {
           "rule": "RH1.6",
-          "incorrect": "## Instructions ### Instructions",
+          "incorrect": "## Instructions\n\n### Instructions",
           "explanation": "Heading names should not repeat."
         }
       ]
