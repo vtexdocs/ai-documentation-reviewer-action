@@ -114,8 +114,8 @@
         },
         {
           "rule": "RH1.5",
-          "correct": "## Instructions 1. Run the installation script. 2. Confirm the output.",
-          "incorrect": "## Instructions ### Step 1 - Run the installation script 1. Run the installation script.",
+          "correct": "## Instructions\n\n1. Run the installation script.\n2. Confirm the output.",
+          "incorrect": "## Instructions\n\n### Step 1 - Run the installation script\n\n1. Run the installation script.",
           "explanation": "Because there is only one step, adding a step heading is unnecessary."
         },
         {
