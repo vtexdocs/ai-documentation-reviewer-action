@@ -1,5 +1,216 @@
 {
   "metadata": {
-    "purpose": "Teaches a topic through step-by-step instructions."
+    "purpose": "Provides instructions and a template for writing effective tutorials on the VTEX platform.",
+    "usage": "A comprehensive and detailed guide that teaches users how to perform a series of tasks or understand concepts in depth within the VTEX Developer Portal."
+  },
+  "frontmatter": {
+    "title": {
+      "description": "The title of the tutorial containing the product's name.",
+      "template": "<Tutorial title>",
+      "example": "Pixel Apps",
+      "mandatory": true,
+      "validation_heuristic": "Ensure the title is formatted as '<Tutorial title>', with the verb in the gerund form. The title must state the tutorial's goals."
+    },
+    "slug": {
+      "description": "A unique identifier for the tutorial containing the product's name.",
+      "template": "title",
+      "example": "pixel-apps",
+      "mandatory": true
+    },
+    "hidden":{
+      "description": "A boolean value indicating whether the tutorial is visible to the public or hidden (for draft or internal use).",
+      "mandatory": false
+    },
+    "createdAt": {
+      "description": "The date and time when the release note was created, typically in ISO 8601 format (e.g., '2025-04-25T10:00:00Z').",
+      "mandatory": true
+    },
+    "updatedAt": {
+      "description": "The date and time when the release note was last updated, typically in ISO 8601 format (e.g., '2025-04-25T10:00:00Z').",
+      "mandatory": false
+    },
+  "body": [
+    {
+      "description": "Provide a comprehensive and detailed guide that teaches users how to perform a series of tasks or understand concepts in depth."
+    },
+    {
+      "section": "<Tutorial title>",
+      "description": "The title of the tutorial containing the product's name."
+    },
+    {
+      "section": "Before you begin",
+      "description": "Lists all necessary prerequisites the user must meet or complete before following the steps in the guide.",
+      "example": "Before taking this tutorial, check our list of Pixel apps and make sure the integration you're looking for is not already available.",
+      "mandatory": false
+    },
+    {
+      "section": "Steps",
+      "description": "The steps will be presented as a list. The list is in the templates after the sentence 'Here's an overview of the parts'. Each step's title starts with a verb in the gerund form."
+    },
+    {
+      "section": "Content of the steps",
+      "description": "Should guide the user from one point to the next in a logical sequence."
+    }
+  ],
+  "style_guide": {
+    "tone_and_voice": {
+      "rules": [
+        {
+          "id": "R1.1",
+          "description": "Use clear, direct language without unnecessary adverbs or marketing speak.",
+          "validation_heuristic": [
+            "Flag marketing adjectives (e.g., 'amazing', 'powerful').",
+            "Flag unnecessary adverbs (e.g., 'simply', 'easily') in instructional content."
+          ]
+        },
+        {
+          "id": "R1.2",
+          "description": "Maintain professional but approachable tone.",
+          "validation_heuristic": "Verify text avoids both overly casual language ('stuff', 'thing') and overly formal constructions ('one must', 'the user shall')."
+        },
+        {
+          "id": "R1.3",
+          "description": "The language should remain professional and clear.",
+          "validation_heuristic": "Verify text avoids the use of slang ('thing', 'tweak', 'config')."
+        },
+        {
+          "id": "R1.5",
+          "description": "Use second-person pronouns (e.g., 'you') to address the reader directly.",
+          "validation_heuristic": "Ensure the text uses 'you' or 'your' instead of third-person references (e.g., 'the user')."
+        }
+      ],
+      "examples": [
+        {
+          "rule": "R1.1",
+          "correct": "Use the `vtex setup` command to initialize your environment.",
+          "incorrect": "Simply run `vtex setup` to effortlessly bootstrap your stuff.",
+          "explanation": "Adding 'effortlessly'/'simply' in the incorrect version introduces unnecessary subjectivity and promotional tone. The correct version avoids this and stays factual."
+        },
+        {
+          "rule": "R1.2",
+          "correct": "Use the `vtex setup` command to initialize your environment.",
+          "incorrect": "Simply run the setup and you're good to go.",
+          "explanation": "The incorrect sentence is vague ('the setup'), uses imprecise language ('you're good to go'), and adds 'simply'—all of which reduce clarity. The correct version avoids this and stays factual."
+        },
+        {
+          "rule": "R1.3",
+          "correct": "You can configure your store settings directly in the Admin panel.",
+          "incorrect": "Just go to the Admin thing and tweak your config there.",
+          "explanation": "The incorrect version is too informal and uses slang ('Admin thing', 'tweak your config'). The correct version is professional and clear."
+        }
+      ]
+    },
+    "morphology": {
+      "rules": [
+          {
+            "id": "R3.1",
+            "description": "Use active voice instead of passive voice.",
+            "validation_heuristic": "Check for passive constructions (e.g., 'The settings can be configured by the user') and rewrite in active voice (e.g., 'You can configure the settings')."
+          },
+          {
+            "id": "R3.2",
+            "description": "Use second-person pronouns (e.g., 'you') to address the reader directly.",
+            "validation_heuristic": "Ensure the text uses 'you' or 'your' instead of third-person references (e.g., 'the user')."
+          },
+          {
+            "id": "R3.3",
+            "description": "Avoid subjective adjectives like 'easy' or 'simple'.",
+            "validation_heuristic": "Flag subjective terms that may not apply universally (e.g., 'easy', 'quick'). Replace with factual descriptions."
+          }
+       ],
+        "examples": [
+          {
+            "rule": "R3.1",
+            "correct": "You can configure the settings in the Admin panel.",
+            "incorrect": "The settings can be configured in the Admin panel.",
+            "explanation": "The incorrect version uses passive voice, which is less direct. The correct version uses active voice for clarity."
+          },
+          {
+            "rule": "R3.2",
+            "correct": "You can access your account settings from the dashboard.",
+            "incorrect": "The user can access their account settings from the dashboard.",
+            "explanation": "The incorrect version uses third-person pronouns, which creates distance. The correct version addresses the reader directly."
+          },
+          {
+            "rule": "R3.3",
+            "correct": "The process takes approximately five minutes to complete.",
+            "incorrect": "The process is quick and easy to complete.",
+            "explanation": "The incorrect version uses subjective terms ('quick', 'easy'). The correct version provides a factual description."
+          }
+        ]
+      }
+    },
+    "spelling" :{
+      "rules": [
+        {
+           "id": "R4.1",
+           "description": "Always use the full feature or product name on first reference. Abbreviations may be used thereafter if they are clearly defined.",
+           "validation_heuristic": "Check if the first instance of a term is spelled out in full, followed by the abbreviation in parentheses (e.g., 'Order Management System (OMS)')."
+        },
+        {
+           "id": "R4.2",
+           "description": "Avoid abbreviations unless they are widely recognized (e.g., 'URL', 'API').",
+           "validation_heuristic": "Flag obscure abbreviations (e.g., 'config' for 'configuration') unless they are explicitly defined or industry-standard."
+        },
+        {
+           "id": "R4.3",
+           "description": "Spell out acronyms on first use in a document or section, followed by the acronym in parentheses.",
+           "validation_heuristic": "Verify that the first occurrence of an acronym is expanded (e.g., 'Content Delivery Network (CDN)')."
+        },
+        {
+           "id": "R4.4",
+           "description": "Do not redefine acronyms if they are already spelled out elsewhere in the document or are globally recognized (e.g., 'HTML', 'PDF').",
+           "validation_heuristic": "Flag redundant expansions of common acronyms (e.g., 'HyperText Markup Language (HTML)')."
+        },
+        {
+           "id": "R4.5",
+           "description": "Avoid contractions in technical documentation (e.g., use 'do not' instead of 'don't').",
+           "validation_heuristic": "Flag contractions (e.g., 'can't', 'won't') and replace with full forms."
+        },
+        {
+          "id": "R4.6",
+          "description": "Exceptions include UI labels or quoted text where contractions are part of the original material.",
+          "validation_heuristic": "Allow contractions only in direct quotes or UI reproductions (e.g., a button labeled 'Don't save')."
+        }
+      ],
+      "examples": [
+        {
+          "rule": "R4.1",
+          "correct": "First, enter the Order Management System (OMS). Then, click...",
+          "incorrect": "First, enter the OMS. Then, click...",
+          "explanation": "The incorrect version fails to define 'OMS' on first use. The correct version spells it out and introduces the abbreviation."
+        },
+        {
+          "rule": "R4.2",
+          "correct": "Configure the settings in the Admin panel.",
+          "incorrect": "Config the settings in the Admin panel.",
+          "explanation": "'Config' is an informal abbreviation. The correct version uses the full term for clarity."
+        },
+        {
+          "rule": "R4.3",
+          "correct": "The Content Delivery Network (CDN) improves performance. The CDN caches static assets.",
+          "incorrect": "The CDN improves performance. The CDN caches static assets.",
+          "explanation": "The incorrect version assumes prior knowledge of 'CDN'. The correct version defines it upfront."
+        },
+        {
+          "rule": "R4.4",
+          "correct": "Export the report as a PDF.",
+          "incorrect": "Export the report as a Portable Document Format (PDF).",
+          "explanation": "'PDF' is globally recognized and does not require expansion."
+        },
+        {
+          "rule": "R4.5",
+          "correct": "You cannot create a product without a brand.",
+          "incorrect": "You can't create a product without a brand.",
+          "explanation": "The incorrect version uses a contraction, which is less formal. The correct version uses the full form."
+        },
+        {
+          "rule": "R4.6",
+          "correct": "The UI displays the message: 'Don't save'.",
+          "incorrect": "The UI displays the message: 'Do not save'.",
+          "explanation": "The incorrect version alters the original UI text. Contractions are allowed in direct reproductions."
+        }
+      ]
+    }
+    }
   }
-}
