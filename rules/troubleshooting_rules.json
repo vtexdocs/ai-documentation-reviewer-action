@@ -1,0 +1,221 @@
+{
+  "metadata": {
+      "purpose": "Help users find practical solutions to problems they may encounter when completing tasks on the VTEX platform.",
+      "usage": "A template for documenting known issues and their solutions within the VTEX platform."
+  },
+  "frontmatter": {
+      "title": {
+          "description": "A clear, concise summary of the issue from the user's perspective.",
+          "mandatory": true,
+          "voice": "First-person perspective to reflect the user's experience",
+          "format": "Avoid questions. Limit to 60 characters. Focus on what the user cannot do.",
+          "examples": {
+              "do": [
+                  "My Mercado Livre orders have errors."
+              ],
+              "dont": [
+                  "Why wasn't the price sent to the marketplace?"
+              ]
+          }
+      },
+      "tags": {
+          "description": "List up to 3 relevant product or module names associated with the issue.",
+          "mandatory": true,
+          "examples": {
+              "do": [
+                  "Marketplace, integration, price",
+                  "marketplace, catalog, products"
+              ],
+              "dont": [
+                  "Catalog module and Store Framework technology."
+              ]
+          }
+      },
+      "keywords": {
+          "description": "Include up to 3 key terms that help surface the article in search results",
+          "mandatory": true,
+          "examples": {
+              "do": [
+                  "integration, Mercado Livre, product sending, orders",
+                  "Marketplace, integration, price"
+              ],
+              "dont": [
+                  "Catalog module, SKU code, integration with other systems"
+              ]
+          }
+      }
+  },
+  "body": [
+      {
+          "description": "Describe the scenario, affected module/functionality, error messages (if any), and reproduction conditions."
+      },
+      {
+          "section": "Solution",
+          "description": "Provide a step-by-step guide to resolve the issue, including any necessary prerequisites. When dealing with multiple related errors, use table format to group error messages with their meanings and required actions."
+      }
+  ],
+  "style_guide": {
+      "body": {
+          "rules": [
+              {
+                  "id": "B1.1",
+                  "description": "Limit problem description to 1-2 concise paragraphs.",
+                  "validation_heuristic": [
+                      "The description contains no more than 2 paragraphs.",
+                      "Each paragraph focuses on a single aspect of the problem."
+                  ],
+                  "examples": {
+                      "do": [
+                          "A product price is sent to the marketplace after two steps: pricing configuration in the seller's store and product cataloging. If one of these processes is not performed, the seller's product price will not be available on the marketplace."
+                      ],
+                      "dont": [
+                          "This is a vague description that might extend beyond two paragraphs without clear focus."
+                      ]
+                  }
+              },
+              {
+                  "id": "B1.2",
+                  "description": "Include all relevant error messages, module/functionality details, and specific conditions that reproduce the issue.",
+                  "validation_heuristic": [
+                      "Error messages are quoted exactly as they appear.",
+                      "The affected module or functionality is clearly identified.",
+                      "Reproduction steps or conditions are specified."
+                  ],
+                  "examples": {
+                      "do": [
+                          "Orders show integration errors due to **Official Mercado Livre Store ID** incorrectly registered or **Non-existent Categories in Mercado Livre**."
+                      ],
+                      "dont": [
+                          "There was an issue with the Mercado Livre integration."
+                      ]
+                  }
+              }
+          ]
+      },
+      "solutions": {
+          "rules": [
+            {
+              "id": "R1.1",
+              "description": "For multiple errors caused by the same underlying issue, use a table format. Each row should contain the error message, its meaning, and the required action to resolve it.",
+              "validation_heuristic": [
+                "Related errors are grouped together in a single table.",
+                "Each row follows the format: Error message → Meaning → Action required.",
+                "The underlying common cause is clearly explained before the error table."
+              ],
+              "examples": {
+                "do": [
+                  "| Error message | Meaning | Required action |\n|---|---|---|\n| Sale price cannot be updated to 29.99. Can not offer more then 70% off. | The seller cannot give more than 70% off the base price of a product. | Change the discount price to a value within the percentage required by the marketplace. |\n| Check if the SKU has a price set for this policy or if the price has expired. | The SKU price has not been added to the trade policy used in the integration with the marketplace, or it has expired. | Add the SKU price to the trade policy used to integrate the store with the marketplace. |"
+                ],
+                "dont": [
+                  "Error 1: Price too low. Fix: Change price. Error 2: SKU not found. Fix: Add SKU to policy."
+                ]
+              }
+            },
+              {
+                  "id": "R1.2",
+                  "description": "Use examples whenever possible to support understanding.",
+                  "validation_heuristic": [
+                      "At least one practical example is provided for each major concept or step.",
+                      "Examples are relevant to the specific issue being addressed."
+                  ],
+                  "examples": {
+                      "do": [
+                          "To identify the attribute indicated in the error message, consult the initial number of the codes determined by Mercado Libre. Click on the name of your country to download the reference spreadsheet: Brazil [link], Argentina [link], etc."
+                      ],
+                      "dont": [
+                          "Just state: 'Attributes need to match without providing any reference or tool.'"
+                      ]
+                  }
+              },
+              {
+                  "id": "R1.3",
+                  "description": "Use images to illustrate steps in the solution.",
+                  "validation_heuristic": [
+                      "Images should be clear and relevant to the content."
+                  ],
+                  "examples": {
+                      "do": [
+                          "This rule is not explicitly exemplified in the provided documents, as they do not contain images. An ideal example would be a screenshot of a specific menu or button click."
+                      ],
+                      "dont": [
+                          "No image provided for a complex UI navigation step."
+                      ]
+                  }
+              },
+              {
+                  "id": "R1.4",
+                  "description": "Use links to existing documentation for complex solutions.",
+                  "validation_heuristic": [
+                      "Links should be relevant and lead to the correct documentation."
+                  ],
+                  "examples": {
+                      "do": [
+                          "The [price module configuration](https://help.vtex.com/en/tracks/precos-101--6f8pwCns3PJHqMvQSugNfP/3N9xYhnampRQOrfaTAOxNu) is where the seller creates, edits, and stores the price data for the SKUs sold in their store."
+                      ],
+                      "dont": [
+                          "Explain the entire pricing module configuration within the troubleshooting article."
+                      ]
+                  }
+              },
+              {
+                  "id": "R1.5",
+                  "description": "Use active voice and imperative mood for instructions.",
+                  "validation_heuristic": [
+                      "Instructions should be clear and actionable."
+                  ],
+                  "examples": {
+                      "do": [
+                          "In the VTEX Admin, click **Marketplace > Connections > Price**."
+                      ],
+                      "dont": [
+                          "The user should click on the 'Actions' button."
+                      ]
+                  }
+              },
+              {
+                  "id": "R1.6",
+                  "description": "Use numbered steps for step-by-step instructions.",
+                  "examples": {
+                      "do": [
+                          "1. In the VTEX Admin, click **Marketplace > Connections > Price**.\n2. Click the product with the **Processed with error** status."
+                      ],
+                      "dont": [
+                          "Click Marketplace. Then click Connections. Then click Price."
+                      ]
+                  }
+              },
+              {
+                  "id": "R1.7",
+                  "description": "Indicate who is responsible for each step (VTEX or user).",
+                  "validation_heuristic": [
+                      "Check if the actor responsible for each step is specified."
+                  ],
+                  "examples": {
+                      "do": [
+                          "This process is done manually and exclusively by the marketplace." ,
+                          "If the products have already been cataloged, you must submit the product prices again by following the steps below:"
+                      ],
+                      "dont": [
+                          "A price re-submission is necessary."
+                      ]
+                  }
+              },
+              {
+                  "id": "R1.8",
+                  "description": "Use clear, concise language to avoid ambiguity.",
+                  "examples": {
+                      "do": [
+                          "To solve the problem, you must first identify which of the processes contains the error and apply the necessary correction."
+                      ],
+                      "dont": [
+                          {
+                              "example": "Login problems often occur and may be difficult to identify...",
+                              "explanation": "This statement is too vague and doesn't provide actionable information. It doesn't specify what login problems, their causes, or how to resolve them."
+                          }
+                      ]
+                  }
+              }
+          ]
+      }
+  }
+}
