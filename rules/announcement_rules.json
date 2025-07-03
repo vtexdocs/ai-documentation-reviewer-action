@@ -35,11 +35,11 @@
     },
     {
       "section": "Why did we make this change?",
-      "description": "Ensure it explains the reasoning behind the change and lists at least one key benefit (preferably 3).",
+      "description": "Ensure it explains the reasoning behind the change and lists at least one key benefit (preferably 3)."
     },
     {
       "section": "What needs to be done?",
-      "description": "Verify that it clearly explains what the user needs to do to start using the feature, with actionable steps.",
+      "description": "Verify that it clearly explains what the user needs to do to start using the feature, with actionable steps."
     },
     {
       "section": "Additional resources",
