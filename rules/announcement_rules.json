@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "purpose": "Provides instructions and a template for writing announcements that communicate product changes to VTEX users in a clear and actionable way.",
+    "usage": "A template for communicating new features, product updates, or product deprecations to platform operators and users within the VTEX platform."
+  },
+  "frontmatter": {
+    "title": {
+      "description": "The title of the announcement, reflecting the product/feature and a concise, clear summary of the change or update. The summary should briefly describe the key change or improvement made to the product/feature.",
+      "template": "<Product/Feature name>: <Summary>",
+      "example": "VTEX Sales App: Improvements in the checkout experience",
+      "mandatory": true
+    },
+    "slug": {
+      "description": "A URL-friendly slug for the announcement",
+      "mandatory": true,
+      "example": "vtex-sales-app-improvements-in-the-checkout-experience",
+      "validation_heuristic": "Ensure that the slug is present, URL-friendly, and reflects the feature name."
+    },
+    "synopsis": {
+      "description": "A brief, high-level summary of the announcement, providing users with key information at a glance.",
+      "max_length": 120,
+      "example": "The VTEX Sales App has been updated to simplify the checkout process and improve customer data usage.",
+      "template": "<Brief summary of the feature and its benefit>",
+      "mandatory": true,
+      "validation_heuristic": "Verify that the synopsis is present, concise (under 120 characters), and accurately summarizes the feature and its main user-facing benefit."
+    }
+  },
+  "body": [
+    {
+      "description": "Confirm that the feature name and its main benefit are clearly stated, including availability (Alpha, Beta, GA, country-specific, etc.)."
+    },
+    {
+      "section": "What has changed?",
+      "description": "Check that it explains the previous process and how the feature changes or improves it."
+    },
+    {
+      "section": "Why did we make this change?",
+      "description": "Ensure it explains the reasoning behind the change and lists at least one key benefit (preferably 3)."
+    },
+    {
+      "section": "What needs to be done?",
+      "description": "Verify that it clearly explains what the user needs to do to start using the feature, with actionable steps."
+    },
+    {
+      "section": "Additional resources",
+      "description": "Confirm that there is a link or reference to further documentation, tracks, or help articles."
+    }
+  ],
+  "style_guidelines": {
+    "tone_and_voice": {
+      "rules": [
+        {
+          "id": "R1.1",
+          "description": "Use clear, direct language without unnecessary adverbs or marketing speak",
+          "validation_heuristic": [
+            "Flag marketing adjectives (e.g., 'amazing', 'powerful').",
+            "Flag unnecessary adverbs (e.g., 'simply', 'easily') in instructional content."
+          ]
+        },
+        {
+          "id": "R1.2",
+          "description": "Use active voice and direct language to enhance clarity",
+          "validation_heuristic": [
+            "Flag passive constructions (e.g., 'is being done') in favor of active voice (e.g., 'we do')."
+          ]
+        },
+        {
+          "id": "R1.3",
+          "description": "Avoid vague statements and excessive technical jargon",
+          "validation_heuristic": [
+            "Flag vague terms (e.g., 'better', 'improved') without specific context.",
+            "Ensure technical terms are explained or linked to documentation."
+          ]
+        }
+      ]
+    },
+    "consistency": {
+      "rules": [
+        {
+          "id": "R2.1",
+          "description": "Use consistent terminology for features, modules, and menu names",
+          "validation_heuristic": [
+            "Check for consistent use of product names and capitalization according to VTEX style guide.",
+            "Ensure error messages and UI elements match the platform exactly."
+          ]
+        }
+      ]
+    },
+    "language": {
+      "rules": [
+        {
+          "id": "R3.1",
+          "description": "Use present tense to describe existing features.",
+          "validation_heuristic": [
+            "Scan for past or future tense verbs describing currently available functionality."
+          ]
+        },
+        {
+          "id": "R3.2",
+          "description": "Specify the scope of availability when describing features.",
+          "validation_heuristic": [
+            "Check that documentation clearly states whether features are in Alpha, Beta, or GA.",
+            "Ensure regional or account-specific availability is mentioned where relevant."
+          ]
+        }
+      ]
+    }
+  }
+}
