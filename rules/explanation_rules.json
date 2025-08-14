@@ -38,7 +38,7 @@
             ]
           },
           {
-            "id": "R1.6",
+            "id": "R1.5",
             "description": "Include cross-references and related links when possible.",
             "validation_heuristic": [
               "Scan the article for mentions of VTEX-specific concepts, products, APIs, modules, features, or UI areas (e.g., 'VTEX IO', 'Order Management', 'Checkout API').",
