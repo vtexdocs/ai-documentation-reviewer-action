@@ -1,8 +1,7 @@
 {
   "Release Note": "/action/rules/release_notes_rules.json",
   "Explanation": "/action/rules/explanation_rules.json",
-  "Announcement": "/action/rules/announcement_rules.json",
   "Troubleshooting": "/action/rules/troubleshooting_rules.json",
-  "Guides": "/action/rules/guides_rules.json",
+  "Guide": "/action/rules/guides_rules.json",
   "Tutorial": "/action/rules/tutorial_rules.json"
 }
