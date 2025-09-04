@@ -3,7 +3,7 @@
     "purpose": "Provides instructions and a template for writing effective how-to guides in the VTEX Developer Portal.",
     "usage": "A structured template for task-focused documentation in the VTEX Developer Portal, intended for readers who are already familiar with the product fundamentals and want to achieve a specific goal."
   },
-   "frontmatter": {
+  "frontmatter": {
     "title": {
       "description": "The title of the Guide, in gerund form, avoiding filler phrases like 'How to', and clearly stating the user’s goal.",
       "example": "Setting up your development environment",
@@ -63,7 +63,7 @@
           "mandatory": false
         }
       ]
-    }
+    },
     {
       "section": "Next steps",
       "description": "Suggest related tasks, troubleshooting options, or follow-up actions after completing the guide.",
@@ -96,24 +96,25 @@
           "description": "Content must be complete and accurate, avoiding exaggeration and irrelevant information.",
           "validation_heuristic": "Detect overstatements or unrelated details."
         },
-         {
-            "id": "R2.3",
-            "description": "Use present tense, active voice, and simple sentence constructions.",
-            "validation_heuristic": "Check for passive voice, past tense where not required, or complex syntactic patterns."
-          },
-          {
-            "id": "R2.4",
-            "description": "Frame instructions around 'you' rather than 'we'.",
-            "validation_heuristic": "Flag first-person plural constructions ('we', 'our') for instructions."
-          },
-          {
+        {
+          "id": "R2.3",
+          "description": "Use present tense, active voice, and simple sentence constructions.",
+          "validation_heuristic": "Check for passive voice, past tense where not required, or complex syntactic patterns."
+        },
+        {
+          "id": "R2.4",
+          "description": "Frame instructions around 'you' rather than 'we'.",
+          "validation_heuristic": "Flag first-person plural constructions ('we', 'our') for instructions."
+        },
+        {
           "id": "R2.5",
           "description": "Use numbered lists for instructions. Each item must begin with an imperative verb that clearly tells the reader what to do.",
           "validation_heuristic": [
             "For each numbered step, check that the first word is an imperative verb (e.g., 'Open', 'Click', 'Run', 'Select').",
             "Flag if the first word is a noun, adjective, or vague phrase (e.g., 'The process', 'In order to').",
             "Reject steps starting with filler like 'First', 'Then', or 'After that' unless followed immediately by an imperative verb."
-          ],
+          ]
+        }
       ],
       "examples": [
         {
@@ -151,8 +152,8 @@
           "correct": "2. Select **Settings** from the navigation menu.",
           "incorrect": "2. Settings are available in the navigation menu.",
           "explanation": "The correct version begins with the action 'Select', while the incorrect is descriptive rather than instructive."
-        },
+        }
       ]
-    },
+    }
   }
 }
