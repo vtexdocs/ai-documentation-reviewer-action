@@ -5,48 +5,48 @@
   },
   "style_guide": {
     "content_strcuture": {
-        "rules": [
-          {
-            "id": "R1.1",
-            "description": "Content should be divided into headings grouping ideas",
-            "validation_heuristic" : [
-              "The content begins with an introduction, then headings come after for specific topics.",
-              "Each heading should properly compartmentalize an idea (e.g., explanation of sub-concepts)"
-            ]
-          },
-          {
-            "id": "R1.2",
-            "description": "Avoid step-by-step instructions in explanation articles.",
-            "validation_heuristic": [
-              "If procedural guidance is needed, link to a separate How-to-guide article instead."
-            ]
-          },
-          {
-            "id": "R1.3",
-            "description": "Begin with context and relevance before diving into details.",
-            "validation_heuristic": [
-              "The first section explains why the concept matters and where it fits in the VTEX ecosystem.",
-              "Avoid starting with technical specifics without giving context."
-            ]
-          },
-          {
-            "id": "R1.4",
-            "description": "Use diagrams or tables for complex relationships.",
-            "validation_heuristic": [
-              "If multiple entities or processes are described, check for a diagram or table.",
-              "Flag articles that rely only on dense text when visual aids could improve clarity."
-            ]
-          },
-          {
-            "id": "R1.5",
-            "description": "Include cross-references and related links when possible.",
-            "validation_heuristic": [
-              "Scan the article for mentions of VTEX-specific concepts, products, APIs, modules, features, or UI areas (e.g., 'VTEX IO', 'Order Management', 'Checkout API').",
-              "For each mention, verify that there is at least one hyperlink to the corresponding official Concept, How-to, or Reference article.",
-              "If multiple distinct VTEX concepts are mentioned, ensure that at least the first occurrence of each concept includes a link.",
-            ]
-          }
-        ]
+      "rules": [
+        {
+          "id": "R1.1",
+          "description": "Content should be divided into headings grouping ideas",
+          "validation_heuristic": [
+            "The content begins with an introduction, then headings come after for specific topics.",
+            "Each heading should properly compartmentalize an idea (e.g., explanation of sub-concepts)"
+          ]
+        },
+        {
+          "id": "R1.2",
+          "description": "Avoid step-by-step instructions in explanation articles.",
+          "validation_heuristic": [
+            "If procedural guidance is needed, link to a separate How-to-guide article instead."
+          ]
+        },
+        {
+          "id": "R1.3",
+          "description": "Begin with context and relevance before diving into details.",
+          "validation_heuristic": [
+            "The first section explains why the concept matters and where it fits in the VTEX ecosystem.",
+            "Avoid starting with technical specifics without giving context."
+          ]
+        },
+        {
+          "id": "R1.4",
+          "description": "Use diagrams or tables for complex relationships.",
+          "validation_heuristic": [
+            "If multiple entities or processes are described, check for a diagram or table.",
+            "Flag articles that rely only on dense text when visual aids could improve clarity."
+          ]
+        },
+        {
+          "id": "R1.5",
+          "description": "Include cross-references and related links when possible.",
+          "validation_heuristic": [
+            "Scan the article for mentions of VTEX-specific concepts, products, APIs, modules, features, or UI areas (e.g., 'VTEX IO', 'Order Management', 'Checkout API').",
+            "For each mention, verify that there is at least one hyperlink to the corresponding official Concept, How-to, or Reference article.",
+            "If multiple distinct VTEX concepts are mentioned, ensure that at least the first occurrence of each concept includes a link."
+          ]
+        }
+      ]
     },
     "tone_and_voice": {
       "rules": [
@@ -78,7 +78,6 @@
           "explanation": "The incorrect version is too informal and uses slang ('Admin thing', 'tweak your config'). The correct version is professional and clear."
         }
       ]
-    },
+    }
   }
 }
-
