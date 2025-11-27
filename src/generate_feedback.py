@@ -43,7 +43,7 @@ def generate_feedback(file_path, documentation, rules, client):
     response_text = ""
     
     for chunk in client.models.generate_content_stream(
-      model="gemini-2.0-flash",
+      model="gemini-2.5-pro",
       contents=contents,
       config=generate_content_config
     ):
