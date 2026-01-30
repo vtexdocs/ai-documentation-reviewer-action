@@ -1,0 +1,53 @@
+name: Update major version tag
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  update-major-tag:
+    if: github.event.release.prerelease == false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name }}
+      - uses: haya14busa/action-update-semver@v1
+        with:
+          tag: ${{ github.event.release.tag_name }}
+          major_version_tag_only: true
+      - name: Update major release description
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const tag = context.payload.release.tag_name;
+            const majorTag = tag.split('.')[0];
+            const newBody = `Major ${majorTag}. Keeps updated to the latest version in this major (${tag}).`;
+            try {
+              const { data: release } = await octokit.rest.repos.getReleaseByTag({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                tag: majorTag,
+              });
+              await octokit.rest.repos.updateRelease({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                release_id: release.id,
+                body: newBody,
+              });
+            } catch (err) {
+              if (err.status === 404) {
+                await octokit.rest.repos.createRelease({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  tag_name: majorTag,
+                  name: majorTag,
+                  body: newBody,
+                });
+              } else {
+                throw err;
+              }
+            }
