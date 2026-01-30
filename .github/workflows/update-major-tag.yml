@@ -1,4 +1,4 @@
-name: Update major version tag
+name: Update major version tag/release
 
 on:
   release:
