@@ -48,7 +48,7 @@ def categorize_doc(file_path: str, client: genai.Client) -> dict:
     ]
   
     response_text = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         contents=contents,
         config=generate_content_config,
     )
