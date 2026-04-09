@@ -58,7 +58,7 @@ def generate_feedback(file_path, documentation, rules, client):
                 print(chunk.text, end="", flush=True)
                 response_text += chunk.text
             set_multiline_output("response", response_text)
-        return
+            return
         except Exception as e:
             last_error = e
             print(f"Model {model} failed: {e}. Retrying with next model...")
