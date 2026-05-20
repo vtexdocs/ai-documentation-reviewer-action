@@ -48,6 +48,7 @@ def categorize_doc(file_path: str, client: genai.Client) -> dict:
     ]
 
     GEMINI_MODELS = (
+        "gemini-3-flash-preview",
         "gemini-2.5-flash",
         "gemini-3.1-flash-lite-preview",
     )
