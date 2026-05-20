@@ -49,7 +49,7 @@ def categorize_doc(file_path: str, client: genai.Client) -> dict:
 
     GEMINI_MODELS = (
         "gemini-2.5-flash",
-        "gemini-3.1-flash-lite-preview",
+        "gemini-3.1-flash-lite",
     )
 
     last_error: BaseException | None = None
